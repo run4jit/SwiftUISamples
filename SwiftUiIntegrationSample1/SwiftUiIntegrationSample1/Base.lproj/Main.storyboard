@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TOG-uW-SNu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jxk-jb-6Tm">
+            <objects>
+                <navigationController id="TOG-uW-SNu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kGh-CV-MmF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qW4-Py-ooj" kind="relationship" relationship="rootViewController" id="coV-Xo-fjg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3e-ll-f88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1125" y="-35"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="64h-ET-QuF">
+            <objects>
+                <viewController id="qW4-Py-ooj" customClass="ViewController" customModule="SwiftUiIntegrationSample1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrS-TK-J1c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvD-Ma-mFZ">
+                                <rect key="frame" x="119" y="433" width="176" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take me to SwiftUI View"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="qW4-Py-ooj" eventType="touchUpInside" id="3fF-iO-O7T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am in UI View controler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cH-5I-NlS">
+                                <rect key="frame" x="10" y="238" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RvD-Ma-mFZ" firstAttribute="centerX" secondItem="wrS-TK-J1c" secondAttribute="centerX" id="9A9-k6-ae3"/>
+                            <constraint firstItem="8cH-5I-NlS" firstAttribute="leading" secondItem="FiE-Lt-yIu" secondAttribute="leading" constant="10" id="Ha2-xD-ueX"/>
+                            <constraint firstItem="FiE-Lt-yIu" firstAttribute="trailing" secondItem="8cH-5I-NlS" secondAttribute="trailing" constant="10" id="Lix-W5-DrJ"/>
+                            <constraint firstItem="8cH-5I-NlS" firstAttribute="top" secondItem="FiE-Lt-yIu" secondAttribute="top" constant="150" id="SKP-CH-afW"/>
+                            <constraint firstItem="RvD-Ma-mFZ" firstAttribute="centerY" secondItem="wrS-TK-J1c" secondAttribute="centerY" id="ajn-6u-lQY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FiE-Lt-yIu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Czo-2y-tAE"/>
+                    <connections>
+                        <outlet property="label" destination="8cH-5I-NlS" id="Hce-nN-dVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvV-mY-LyV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="-35"/>
+        </scene>
+    </scenes>
+</document>
